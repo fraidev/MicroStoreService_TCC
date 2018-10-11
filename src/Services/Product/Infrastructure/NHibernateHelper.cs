@@ -12,7 +12,7 @@ namespace Product.Infrastructure
         {
             return Fluently.Configure()
                 .Database(MsSqlConfiguration.MsSql2012
-                    .ConnectionString("Data Source=.;Initial Catalog=ProductDatabase;Integrated Security=SSPI;")
+                    .ConnectionString("Data Source=.;Initial Catalog=ProductsDatabase;Integrated Security=SSPI;")
                     .ShowSql())
 
                 .Mappings(m => m.FluentMappings
