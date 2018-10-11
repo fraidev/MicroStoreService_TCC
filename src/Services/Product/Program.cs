@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+using Product.Infrastructure;
 
 namespace Product
 {
@@ -14,6 +8,8 @@ namespace Product
     {
         public static void Main(string[] args)
         {
+            var sessionFactory = NHibernateHelper.CreateSessionFactory();
+            
             CreateWebHostBuilder(args).Build().Run();
         }
 

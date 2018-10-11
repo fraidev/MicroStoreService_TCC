@@ -8,7 +8,7 @@ namespace Product.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ProductController : ControllerBase
     {
         // GET api/values
         [HttpGet]
